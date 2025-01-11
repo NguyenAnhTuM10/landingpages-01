@@ -13,6 +13,10 @@ body {
     font-size: 1.6rem; /* vì mặc định font-size của trình duyệt là 16px nên trả về 1.6 rem  = 16 px;*/
     font-family: "Poppins";
 }
+html,
+body {
+    scroll-behavior: smooth;
+}
 
 /*Common -- dùng chung*/
 
@@ -92,7 +96,7 @@ a {
 }
 
 .hero .info {
-    margin-top: 130px;
+    padding-top: 130px;
     width: 51%;
 }
 
@@ -599,4 +603,21 @@ footer .column .item a {
 
 .footer .icon {
     margin-top: 40px;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #e6f0ff; /* Màu nền ban đầu */
+    transition: background-color 0.5s ease; /* Hiệu ứng chuyển màu */
+    z-index: 1000; /* Đảm bảo navbar luôn nằm trên các phần tử khác */
+}
+
+/* Khi người dùng cuộn trang, thêm một lớp CSS */
+.navbar.scrolled {
+    background-color: red; /* Màu nền khi cuộn */
+}
+
+.row-header {
+    display: flex;
 }
